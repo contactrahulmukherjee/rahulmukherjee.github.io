@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahul Mukherjee | Product & Project Management</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    header {
+      padding: 80px 10%;
+      background: linear-gradient(135deg, #0ea5e9, #22c55e);
+      color: #020617;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    section {
+      padding: 60px 10%;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #22c55e;
+    }
+    footer {
+      padding: 40px 10%;
+      text-align: center;
+      background: #020617;
+      color: #94a3b8;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Rahul Mukherjee</h1>
+  <p>
+    Product & Project Management professional with 4+ years of experience,
+    including 2 years in sustainability, traceability, and SaaS-driven programs.
+  </p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    I work at the intersection of technology, sustainability, and business.
+    My experience spans program management, product delivery, and client-facing
+    roles across global fashion and retail brands. I enjoy turning complex
+    problems into simple, scalable systems.
+  </p>
+</section>
+
+<section>
+  <h2>What I Do</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Product Management</h3>
+      <p>
+        Translating business needs into clear product requirements, roadmaps,
+        and measurable outcomes.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Project & Program Management</h3>
+      <p>
+        Leading cross-functional teams, managing timelines, and delivering
+        complex programs at scale.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Sustainability & Traceability</h3>
+      <p>
+        Driving transparency initiatives across supply chains with data-led
+        decision making.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience Highlights</h2>
+  <ul>
+    <li>Managed large-scale traceability programs covering millions of units</li>
+    <li>Worked with global fashion and retail brands</li>
+    <li>Bridged clients, product, and engineering teams</li>
+    <li>Delivered SaaS-style solutions for compliance and reporting</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>
+    📧 Email: <a href="mailto:rahul@email.com">rahul@email.com</a><br />
+    💼 LinkedIn: <a href="#">linkedin.com/in/rahulmukherjee</a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Rahul Mukherjee. Built with clarity and intent.</p>
+</footer>
+
+</body>
+</html>
