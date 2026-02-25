@@ -3,90 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    
+    <title>Hello World!</title>
     <style>
-        /* Basic page setup */
+        /* A little bit of styling to make it look nice */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Takes up the full height of the screen */
+            margin: 0;
         }
-
-        /* Dark header area to match GitHub's aesthetic */
-        header {
-            background-color: #24292e; 
-            color: white;
+        
+        .container {
             text-align: center;
-            padding: 3rem 1rem;
-        }
-
-        /* Center the main content */
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        /* Clean, white boxes for content */
-        .card {
             background: white;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        h1, h2 {
-            margin-top: 0;
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #0366d6; /* GitHub blue */
         }
 
-        /* Link styling */
-        a {
-            color: #0366d6;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer styling */
-        footer {
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
-            color: #666;
+        p {
+            font-size: 1.2rem;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My GitHub Page! 🚀</h1>
-        <p>A simple starting point for my web projects.</p>
-    </header>
 
-    <main>
-        <section class="card">
-            <h2>About Me</h2>
-            <p>Hello! I'm learning how to build and host websites using GitHub Pages. This is my very first static site, hosted entirely for free.</p>
-        </section>
+    <div class="container">
+        <h1>Hello, World! 🌍</h1>
+        <p>My first GitHub Pages website.</p>
+    </div>
 
-        <section class="card">
-            <h2>My Projects</h2>
-            <ul>
-                <li><a href="#">Project One</a> - A cool app I built.</li>
-                <li><a href="#">Project Two</a> - Something else I'm working on.</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 My GitHub Page. Built with simple HTML and CSS.</p>
-    </footer>
 </body>
 </html>
