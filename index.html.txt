@@ -1,318 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+    
+    <style>
+        /* Basic page setup */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        /* Dark header area to match GitHub's aesthetic */
+        header {
+            background-color: #24292e; 
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
 
-<title>Rahul Mukherjee | Project Leader</title>
+        /* Center the main content */
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
 
-<meta name="description" content="Rahul Mukherjee - Project Manager specializing in global supply chain traceability, governance frameworks, and cross-functional program leadership." />
-<meta name="keywords" content="Rahul Mukherjee, Project Manager, Supply Chain, Traceability, TextileGenesis, Governance, Agile" />
-<meta name="author" content="Rahul Mukherjee" />
+        /* Clean, white boxes for content */
+        .card {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
 
-<meta property="og:title" content="Rahul Mukherjee | Project Leader" />
-<meta property="og:description" content="Leading large-scale traceability and governance programs across global retail ecosystems." />
-<meta property="og:type" content="website" />
+        h1, h2 {
+            margin-top: 0;
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        /* Link styling */
+        a {
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        a:hover {
+            text-decoration: underline;
+        }
 
-<style>
-
-/* ===== ROOT ===== */
-
-:root {
-  --bg: #ffffff;
-  --text: #111;
-  --muted: #6e6e73;
-  --accent: #0071e3;
-}
-
-body.dark {
-  --bg: #0b0b0c;
-  --text: #f5f5f7;
-  --muted: #a1a1a6;
-  --accent: #2997ff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  cursor: none;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.4s ease, color 0.4s ease;
-  overflow-x: hidden;
-}
-
-/* ===== CUSTOM CURSOR ===== */
-
-.cursor {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent);
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.15s ease;
-}
-
-/* ===== NAV ===== */
-
-nav {
-  position: fixed;
-  width: 100%;
-  padding: 30px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  transition: 0.4s ease;
-}
-
-nav.scrolled {
-  backdrop-filter: blur(20px);
-  background: rgba(255,255,255,0.8);
-}
-
-body.dark nav.scrolled {
-  background: rgba(0,0,0,0.7);
-}
-
-nav a {
-  margin-left: 40px;
-  text-decoration: none;
-  color: var(--text);
-  font-size: 0.95rem;
-  position: relative;
-}
-
-/* ===== SECTIONS ===== */
-
-section {
-  padding: 160px 8%;
-  max-width: 1400px;
-  margin: auto;
-}
-
-h1 {
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 600;
-  letter-spacing: -1px;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 50px;
-}
-
-p {
-  color: var(--muted);
-  line-height: 1.8;
-  max-width: 600px;
-}
-
-/* ===== BUTTON ===== */
-
-.btn {
-  margin-top: 40px;
-  padding: 14px 36px;
-  border-radius: 30px;
-  border: 1px solid var(--text);
-  background: transparent;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background: var(--text);
-  color: var(--bg);
-}
-
-/* ===== GRID ===== */
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  gap: 40px;
-}
-
-.card {
-  border: 1px solid #e5e5e5;
-  padding: 50px;
-  transition: 0.4s ease;
-  cursor: pointer;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-/* ===== CASE PANEL ===== */
-
-.case-panel {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 60%;
-  height: 100vh;
-  background: var(--bg);
-  padding: 80px;
-  overflow-y: auto;
-  transition: right 0.6s cubic-bezier(0.77, 0, 0.175, 1);
-  z-index: 2000;
-}
-
-.case-panel.active {
-  right: 0;
-}
-
-/* ===== PAGE TRANSITION ===== */
-
-.fade-overlay {
-  position: fixed;
-  inset: 0;
-  background: var(--bg);
-  z-index: 3000;
-  opacity: 1;
-  pointer-events: none;
-  transition: opacity 0.8s ease;
-}
-
-.fade-overlay.hide {
-  opacity: 0;
-}
-
-</style>
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <h1>Welcome to My GitHub Page! 🚀</h1>
+        <p>A simple starting point for my web projects.</p>
+    </header>
 
-<div class="fade-overlay"></div>
-<div class="cursor"></div>
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <p>Hello! I'm learning how to build and host websites using GitHub Pages. This is my very first static site, hosted entirely for free.</p>
+        </section>
 
-<nav>
-  <div><strong>RM</strong></div>
-  <div>
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="resume.pdf" download>Resume</a>
-    <a onclick="toggleDark()">☾</a>
-  </div>
-</nav>
+        <section class="card">
+            <h2>My Projects</h2>
+            <ul>
+                <li><a href="#">Project One</a> - A cool app I built.</li>
+                <li><a href="#">Project Two</a> - Something else I'm working on.</li>
+            </ul>
+        </section>
+    </main>
 
-<section class="hero">
-  <h1 class="animate">Leading Complex Global Programs</h1>
-  <p class="animate">Driving 26M+ unit traceability and governance frameworks across international retail ecosystems.</p>
-  <button class="btn animate">View Work</button>
-</section>
-
-<section id="work">
-  <h2>Selected Programs</h2>
-
-  <div class="grid">
-    <div class="card" onclick="openCase('Global Traceability Rollout',
-    'Led 26M+ unit implementation across multi-brand retail ecosystems with structured governance and sprint cadence.')">
-      <h3>Global Traceability Rollout</h3>
-      <p>26M+ units delivered.</p>
-    </div>
-
-    <div class="card" onclick="openCase('Compliance & Governance',
-    'Integrated MMC, USCTP, SUPIMA compliance frameworks across cross-border regulatory ecosystems.')">
-      <h3>Compliance & Governance</h3>
-      <p>Multi-framework integration.</p>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <h2>About</h2>
-  <p>Project Leader with 4+ years delivering large-scale supply chain implementations across technology-driven retail ecosystems.</p>
-</section>
-
-<div id="casePanel" class="case-panel"></div>
-
-<script>
-
-/* ===== PAGE LOAD FADE ===== */
-window.addEventListener("load", () => {
-  document.querySelector(".fade-overlay").classList.add("hide");
-});
-
-/* ===== NAV SCROLL ===== */
-window.addEventListener("scroll", () => {
-  document.querySelector("nav").classList.toggle("scrolled", window.scrollY > 50);
-});
-
-/* ===== DARK MODE ===== */
-function toggleDark() {
-  document.body.classList.toggle("dark");
-}
-
-/* ===== CUSTOM CURSOR ===== */
-const cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
-
-/* ===== CASE PANEL ===== */
-function openCase(title, content) {
-  const panel = document.getElementById("casePanel");
-  panel.innerHTML = `
-    <h2>${title}</h2>
-    <p style="margin-top:30px;">${content}</p>
-    <br><br>
-    <button class="btn" onclick="closeCase()">Close</button>
-  `;
-  panel.classList.add("active");
-}
-
-function closeCase() {
-  document.getElementById("casePanel").classList.remove("active");
-}
-
-/* ===== GSAP ANIMATIONS ===== */
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.from(".hero h1", {
-  y: 80,
-  opacity: 0,
-  duration: 1.2,
-  ease: "power3.out"
-});
-
-gsap.from(".hero p", {
-  y: 50,
-  opacity: 0,
-  delay: 0.4,
-  duration: 1
-});
-
-gsap.utils.toArray("section").forEach(section => {
-  gsap.from(section.querySelectorAll("h2, p, .card"), {
-    scrollTrigger: {
-      trigger: section,
-      start: "top 80%"
-    },
-    y: 60,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.2
-  });
-});
-
-</script>
-
+    <footer>
+        <p>&copy; 2026 My GitHub Page. Built with simple HTML and CSS.</p>
+    </footer>
 </body>
 </html>
